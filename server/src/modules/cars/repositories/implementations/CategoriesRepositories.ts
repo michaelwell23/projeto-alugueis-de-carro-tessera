@@ -1,5 +1,5 @@
 import { Category } from "../../model/Category";
-import { categoriesRepository } from "../../useCases/CreateCategory";
+
 import {
   ICategoriesRepository,
   ICreateCateoryDTO,
