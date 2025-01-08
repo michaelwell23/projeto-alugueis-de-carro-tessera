@@ -1,10 +1,10 @@
 import express from "express";
 import swaggerUi from "swagger-ui-express";
-import router from "./routes/index.router";
 
+import router from "./routes/index.router";
 import swaggerFile from "./swagger.json";
 
-const port = 3000;
+const port = 3333;
 const app = express();
 
 app.use(express.json());
