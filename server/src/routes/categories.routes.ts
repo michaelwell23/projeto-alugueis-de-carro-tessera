@@ -2,8 +2,8 @@ import { Router } from "express";
 import multer from "multer";
 
 import { createCategoryController } from "../modules/cars/useCases/CreateCategory";
-import { listCategoriesController } from "../modules/cars/useCases/ListCategories";
 import { importCategoryController } from "../modules/cars/useCases/ImportCategory";
+import { listCategoriesController } from "../modules/cars/useCases/ListCategories";
 
 const categoriesRoutes = Router();
 const upload = multer({
@@ -11,6 +11,7 @@ const upload = multer({
 });
 
 categoriesRoutes.post("/", (request, response) => {
+  console.log("Palmeiras não tem mundial...");
   return createCategoryController.handle(request, response);
 });
 
