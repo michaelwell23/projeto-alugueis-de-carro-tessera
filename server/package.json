@@ -6,7 +6,7 @@
     "dev": "ts-node-dev --inspect --transpile-only --ignore-watch node_modules --respawn src/server.ts"
   },
   "keywords": [],
-  "author": "",
+  "author": "Michael Wellington Lopes",
   "license": "ISC",
   "description": "",
   "dependencies": {
