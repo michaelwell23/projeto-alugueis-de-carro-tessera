@@ -3,11 +3,6 @@
   "port": 5432,
   "host": "localhost",
   "username": "docker",
-  "password": "docker",
-  "database": "tesserat",
-  "migrations": ["./src/shared/infra/typeorm/migrations/*.ts"],
-  "entities": ["./src/modules/**/entities/*.ts"],
-  "cli": {
-    "migrationsDir": "./src/shared/infra/typeorm/migrations"
-  }
+  "password": "postgres",
+  "database": "tesserat_db"
 }
