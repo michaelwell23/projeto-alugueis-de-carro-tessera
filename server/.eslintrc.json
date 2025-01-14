@@ -35,8 +35,10 @@
     "import/prefer-default-export": "off",
     "no-shadow": "off",
     "no-console": "off",
+    "eslint-disable-next-line": "off",
     "no-useless-constructor": "off",
     "no-empty-function": "off",
+    "typescript-eslint/no-unused-vars": "off",
     "lines-between-class-members": "off",
     "import/extensions": [
       "error",

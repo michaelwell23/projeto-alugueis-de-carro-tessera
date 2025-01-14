@@ -11,7 +11,6 @@ const upload = multer({
 });
 
 categoriesRoutes.post("/", (request, response) => {
-  console.log("Palmeiras não tem mundial...");
   return createCategoryController.handle(request, response);
 });
 
