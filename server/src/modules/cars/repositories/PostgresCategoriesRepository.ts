@@ -7,13 +7,13 @@ interface ICreateCateoryDTO {
 }
 
 export class PostgresCategoriesRepository implements ICategoriesRepository {
-  findByName(name: string): Category {
+  findByName(name: string): Promise<Category> {
     return null;
   }
-  list(): Category[] {
+  list(): Promise<Category[]> {
     return null;
   }
-  create({ name, description }: ICreateCateoryDTO): void {
+  create({ name, description }: ICreateCateoryDTO): Promise<void> {
     console.log(name, description);
     return null;
   }
