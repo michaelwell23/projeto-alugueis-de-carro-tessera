@@ -16,6 +16,10 @@ export class ImportCategoryUseCase {
   ) {}
 
   loadCategories(file: Express.Multer.File): Promise<IImportCategory[]> {
+    if (!file?.path) {
+      throw new Error("File is undefined or path is missing");
+    }
+
     return new Promise((resolve, rejects) => {
       const stream = fs.createReadStream(file.path);
       const categories: IImportCategory[] = [];
