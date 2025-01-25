@@ -3,7 +3,7 @@ import { getRepository, Repository } from "typeorm";
 import { Category } from "../../entities/Category";
 import {
   ICategoriesRepository,
-  ICreateCateoryDTO,
+  ICreateCategoryDTO,
 } from "../ICategoriesRepository";
 
 export class CategoriesRepository implements ICategoriesRepository {
@@ -13,7 +13,7 @@ export class CategoriesRepository implements ICategoriesRepository {
     this.repository = getRepository(Category);
   }
 
-  async create({ name, description }: ICreateCateoryDTO): Promise<void> {
+  async create({ name, description }: ICreateCategoryDTO): Promise<void> {
     const category = this.repository.create({
       description,
       name,

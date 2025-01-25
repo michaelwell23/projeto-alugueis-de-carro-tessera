@@ -1,7 +1,7 @@
 import { Category } from "../entities/Category";
 import { ICategoriesRepository } from "./ICategoriesRepository";
 
-interface ICreateCateoryDTO {
+interface ICreateCategoryDTO {
   name: string;
   description: string;
 }
@@ -13,7 +13,7 @@ export class PostgresCategoriesRepository implements ICategoriesRepository {
   list(): Promise<Category[]> {
     return null;
   }
-  create({ name, description }: ICreateCateoryDTO): Promise<void> {
+  create({ name, description }: ICreateCategoryDTO): Promise<void> {
     console.log(name, description);
     return null;
   }
