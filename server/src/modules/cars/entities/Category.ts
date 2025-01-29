@@ -5,7 +5,7 @@ import { v4 as uuidv4 } from "uuid";
 @Entity("categories")
 export class Category {
   @PrimaryColumn()
-  id?: string;
+  id: string;
 
   @Column()
   name: string;
