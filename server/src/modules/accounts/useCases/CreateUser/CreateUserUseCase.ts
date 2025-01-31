@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 import { hash } from "bcrypt";
 import { inject, injectable } from "tsyringe";
 
@@ -16,21 +15,23 @@ export class CreateUserUseCase {
     name,
     email,
     password,
-    drive_license,
+    driver_license,
   }: ICreateUserDTO): Promise<void> {
     const userAlreadyExists = await this.usersRepository.findByEmail(email);
 
     if (userAlreadyExists) {
-      throw new Error("User Already exists");
+      throw new Error("User already exists");
     }
 
     const passwordHash = await hash(password, 8);
 
-    await this.usersRepository.create({
+    const user = await this.usersRepository.create({
       name,
       email,
       password: passwordHash,
-      drive_license,
+      driver_license,
     });
+
+    console.log(user);
   }
 }

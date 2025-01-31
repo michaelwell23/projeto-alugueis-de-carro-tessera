@@ -16,11 +16,6 @@ export class CreateUsers1737739055777 implements MigrationInterface {
             type: "varchar",
           },
           {
-            name: "username",
-            type: "varchar",
-            isUnique: true,
-          },
-          {
             name: "password",
             type: "varchar",
           },
@@ -29,7 +24,7 @@ export class CreateUsers1737739055777 implements MigrationInterface {
             type: "varchar",
           },
           {
-            name: "drive_license",
+            name: "driver_license",
             type: "varchar",
           },
           {
