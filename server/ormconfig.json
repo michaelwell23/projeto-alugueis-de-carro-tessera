@@ -4,7 +4,7 @@
   "host": "localhost",
   "username": "postgres",
   "password": "postgres",
-  "database": "tesserat_db",
+  "database": "tessera_db",
   "entities": [
     "./src/modules/cars/entities/*.ts",
     "./src/modules/accounts/entities/*.ts"

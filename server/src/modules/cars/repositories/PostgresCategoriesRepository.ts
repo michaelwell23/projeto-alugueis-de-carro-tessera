@@ -14,7 +14,6 @@ export class PostgresCategoriesRepository implements ICategoriesRepository {
     return null;
   }
   create({ name, description }: ICreateCategoryDTO): Promise<void> {
-    console.log(name, description);
     return null;
   }
 }

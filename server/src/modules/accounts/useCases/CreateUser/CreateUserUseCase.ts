@@ -17,21 +17,26 @@ export class CreateUserUseCase {
     password,
     driver_license,
   }: ICreateUserDTO): Promise<void> {
+    console.log("🔎 Verificando se usuário já existe...");
+
     const userAlreadyExists = await this.usersRepository.findByEmail(email);
+    console.log("✅ findByEmail executado!");
 
     if (userAlreadyExists) {
+      console.log("⛔ Usuário já existe!");
       throw new Error("User already exists");
     }
 
     const passwordHash = await hash(password, 8);
+    console.log(passwordHash);
+    console.log("✅ Senha criptografada!");
 
-    const user = await this.usersRepository.create({
+    await this.usersRepository.create({
       name,
       email,
       password: passwordHash,
       driver_license,
     });
-
-    console.log(user);
+    console.log("✅ Usuário criado com sucesso!");
   }
 }
