@@ -18,7 +18,6 @@ export class CreateUserController {
 
       return response.status(201).send();
     } catch (error) {
-      console.error("Erro ao criar usuário:", error);
       return response.status(500).json({ error: "Internal Server Error" });
     }
   }
