@@ -1,8 +1,8 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 import csvParse from "csv-parse";
 import fs from "fs";
 import { inject, injectable } from "tsyringe";
 
+import { AppError } from "../../../../errors/AppErrors";
 import { ICategoriesRepository } from "../../repositories/ICategoriesRepository";
 
 interface IImportCategory {
@@ -18,7 +18,7 @@ export class ImportCategoryUseCase {
 
   loadCategories(file: Express.Multer.File): Promise<IImportCategory[]> {
     if (!file?.path) {
-      throw new Error("File is undefined or path is missing");
+      throw new AppError("File is undefined or path is missing");
     }
 
     return new Promise((resolve, rejects) => {
