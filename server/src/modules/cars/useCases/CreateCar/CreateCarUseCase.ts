@@ -9,6 +9,7 @@ interface IRequest {
   name: string;
   description: string;
   daily_rate: number;
+  color: string;
   license_plate: string;
   fine_amount: number;
   brand: string;
@@ -26,6 +27,7 @@ export class CreateCarUseCase {
     name,
     description,
     daily_rate,
+    color,
     license_plate,
     fine_amount,
     brand,
@@ -43,6 +45,7 @@ export class CreateCarUseCase {
       name,
       description,
       daily_rate,
+      color,
       license_plate,
       fine_amount,
       brand,
