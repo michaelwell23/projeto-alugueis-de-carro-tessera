@@ -1,13 +1,15 @@
-import { ListCarsUseCase } from "../../../src/modules/cars/useCases/ListCars/ListCarsUseCase";
+import { ListAvailableCarsUseCase } from "../../../src/modules/cars/useCases/ListAvailableCars/ListAvailableCarsUseCase";
 import { CarsRepositoryInMemory } from "../in-memory/CarsRepositoryInMemory";
 
 describe("List Cars", () => {
-  let listCarsUseCase: ListCarsUseCase;
+  let listAvailableCarsUseCase: ListAvailableCarsUseCase;
   let carsRepositoryInMemory: CarsRepositoryInMemory;
 
   beforeEach(() => {
     carsRepositoryInMemory = new CarsRepositoryInMemory();
-    listCarsUseCase = new ListCarsUseCase(carsRepositoryInMemory);
+    listAvailableCarsUseCase = new ListAvailableCarsUseCase(
+      carsRepositoryInMemory
+    );
   });
 
   it("should be able to list all available cars", async () => {
@@ -19,10 +21,10 @@ describe("List Cars", () => {
       license_plate: "ABC-1234",
       fine_amount: 60,
       brand: "Brand",
-      category_id: "category",
+      category_id: "category1",
     });
 
-    const cars = await listCarsUseCase.execute({});
+    const cars = await listAvailableCarsUseCase.execute({});
 
     expect(cars).toEqual([car]);
   });
@@ -36,10 +38,31 @@ describe("List Cars", () => {
       license_plate: "ABC-1234",
       fine_amount: 60,
       brand: "Brand_test",
-      category_id: "category",
+      category_id: "category2",
     });
 
-    const cars = await listCarsUseCase.execute({ brand: "Brand_test" });
+    const cars = await listAvailableCarsUseCase.execute({
+      brand: "Brand_test",
+    });
+
+    expect(cars).toEqual([car]);
+  });
+
+  it("should be able to list all available cars by category", async () => {
+    const car = await carsRepositoryInMemory.create({
+      name: "Car3",
+      description: "Description Car",
+      daily_rate: 169,
+      color: "black",
+      license_plate: "ABC-978",
+      fine_amount: 70,
+      brand: "Brand_test3",
+      category_id: "category3",
+    });
+
+    const cars = await listAvailableCarsUseCase.execute({
+      category_id: "category3",
+    });
 
     expect(cars).toEqual([car]);
   });
