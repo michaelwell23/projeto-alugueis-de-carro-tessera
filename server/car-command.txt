@@ -1,0 +1,29 @@
+INSERT INTO cars (
+    id, name, description, daily_rate, color, available, license_plate,
+    fine_amount, brand, category_id, created_at
+) VALUES
+    -- Econômico
+    (gen_random_uuid(), 'Fiat Mobi', 'Carro econômico e compacto', 80, 'Branco', true, 'ABC1A23', 50, 'Fiat', 'ID_ECONOMICO', NOW()),
+    (gen_random_uuid(), 'Chevrolet Onix', 'Modelo econômico e eficiente', 85, 'Prata', true, 'ABC1B23', 55, 'Chevrolet', 'ID_ECONOMICO', NOW()),
+    (gen_random_uuid(), 'Hyundai HB20', 'Carro acessível e econômico', 90, 'Vermelho', true, 'ABC1C23', 60, 'Hyundai', 'ID_ECONOMICO', NOW()),
+
+    -- Compacto
+    (gen_random_uuid(), 'Volkswagen Polo', 'Compacto com bom espaço interno', 100, 'Azul', true, 'ABC2A23', 70, 'Volkswagen', 'ID_COMPACTO', NOW()),
+    (gen_random_uuid(), 'Ford Ka', 'Modelo compacto ideal para cidade', 95, 'Cinza', true, 'ABC2B23', 65, 'Ford', 'ID_COMPACTO', NOW()),
+    (gen_random_uuid(), 'Renault Sandero', 'Compacto com ótimo porta-malas', 105, 'Preto', true, 'ABC2C23', 75, 'Renault', 'ID_COMPACTO', NOW()),
+
+    -- Intermediário
+    (gen_random_uuid(), 'Toyota Corolla', 'Carro confortável e espaçoso', 130, 'Branco', true, 'ABC3A23', 90, 'Toyota', 'ID_INTERMEDIARIO', NOW()),
+    (gen_random_uuid(), 'Honda Civic', 'Modelo intermediário confortável', 135, 'Preto', true, 'ABC3B23', 95, 'Honda', 'ID_INTERMEDIARIO', NOW()),
+    (gen_random_uuid(), 'Nissan Sentra', 'Intermediário com tecnologia avançada', 140, 'Cinza', true, 'ABC3C23', 100, 'Nissan', 'ID_INTERMEDIARIO', NOW()),
+
+    -- Standard
+    (gen_random_uuid(), 'Chevrolet Cruze', 'Modelo standard com ótimo espaço', 150, 'Prata', true, 'ABC4A23', 110, 'Chevrolet', 'ID_STANDARD', NOW()),
+    (gen_random_uuid(), 'Volkswagen Jetta', 'Standard com potência e conforto', 155, 'Vermelho', true, 'ABC4B23', 115, 'Volkswagen', 'ID_STANDARD', NOW()),
+    (gen_random_uuid(), 'Hyundai Elantra', 'Modelo versátil e espaçoso', 160, 'Azul', true, 'ABC4C23', 120, 'Hyundai', 'ID_STANDARD', NOW()),
+
+    -- SUV
+    (gen_random_uuid(), 'Jeep Compass', 'SUV para todos os terrenos', 200, 'Branco', true, 'ABC5A23', 150, 'Jeep', 'ID_SUV', NOW()),
+    (gen_random_uuid(), 'Toyota RAV4', 'SUV com tecnologia híbrida', 210, 'Preto', true, 'ABC5B23', 160, 'Toyota', 'ID_SUV', NOW()),
+    (gen_random_uuid(), 'Chevrolet Tracker', 'SUV compacto e econômico', 190, 'Cinza', true, 'ABC5C23', 140, 'Chevrolet', 'ID_SUV', NOW());
+
