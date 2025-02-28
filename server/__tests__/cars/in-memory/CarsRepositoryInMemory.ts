@@ -55,12 +55,11 @@ export class CarsRepositoryInMemory implements ICarsRepository {
 
     return all;
   }
-
-  findById(id: string): Promise<Car> {
-    throw new Error("Method not implemented.");
+  async findById(id: string): Promise<Car> {
+    return this.cars.find((car) => car.id === id);
   }
 
-  updateAvailable(id: string, available: boolean): Promise<void> {
+  async updateAvailable(id: string, available: boolean): Promise<void> {
     throw new Error("Method not implemented.");
   }
 }
