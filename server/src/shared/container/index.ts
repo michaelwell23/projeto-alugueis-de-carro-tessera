@@ -29,6 +29,6 @@ container.registerSingleton<ISpecificationsRepository>(
 container.registerSingleton<ICarsRepository>("CarsRepository", CarsRepository);
 
 container.registerSingleton<ICarsImageRepository>(
-  "UploadCarImagesUseCase",
+  "CarsImagesRepository",
   CarsImagesRepository
 );
