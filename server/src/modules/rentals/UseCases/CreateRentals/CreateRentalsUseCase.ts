@@ -1,8 +1,9 @@
+import "reflect-metadata";
 import { injectable } from "tsyringe";
 
-import { Rental } from "@modules/rentals/infra/typeorm/entities/Rental";
-import { IRentalsRepository } from "@modules/rentals/repositories/IRentalsRepository";
-import { AppError } from "@shared/errors/AppError";
+import { AppError } from "../../../../shared/errors/AppError";
+import { Rental } from "../../infra/typeorm/entities/Rental";
+import { IRentalsRepository } from "../../repositories/IRentalsRepository";
 
 interface IRequest {
   user_id: string;
@@ -11,8 +12,8 @@ interface IRequest {
 }
 
 @injectable()
-export class CreateRentalUseCase {
-  contructor(private rentalsRepository: IRentalsRepository) {}
+export class CreateRentalsUseCase {
+  constructor(private rentalsRepository: IRentalsRepository) {}
 
   async execute({
     user_id,
@@ -23,7 +24,7 @@ export class CreateRentalUseCase {
       car_id
     );
 
-    if (!carUnavailable) {
+    if (carUnavailable) {
       throw new AppError("Car is unavailable");
     }
 
@@ -34,5 +35,13 @@ export class CreateRentalUseCase {
     if (rentalOpenToUser) {
       throw new AppError("There's a rental in progress for user!");
     }
+
+    const rental = this.rentalsRepository.create({
+      user_id,
+      car_id,
+      expected_return_date,
+    });
+
+    return rental;
   }
 }
