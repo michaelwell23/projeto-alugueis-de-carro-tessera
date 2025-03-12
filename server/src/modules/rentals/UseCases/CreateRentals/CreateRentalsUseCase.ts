@@ -1,5 +1,4 @@
 import "reflect-metadata";
-import dayjs from "dayjs";
 import { inject, injectable } from "tsyringe";
 
 import { IDateProvider } from "@shared/container/providers/DateProvider/IDateProvider";
@@ -20,6 +19,7 @@ export class CreateRentalsUseCase {
     @inject("RentalsRepository")
     private rentalsRepository: IRentalsRepository,
 
+    @inject("DayjsDateProvider")
     private dateProvider: IDateProvider
   ) {}
 
