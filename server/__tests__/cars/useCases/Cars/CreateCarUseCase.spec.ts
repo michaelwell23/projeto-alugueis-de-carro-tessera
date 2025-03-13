@@ -1,6 +1,6 @@
-import { CreateCarUseCase } from "../../../src/modules/cars/useCases/CreateCar/CreateCarUseCase";
-import { AppError } from "../../../src/shared/errors/AppError";
-import { CarsRepositoryInMemory } from "../in-memory/CarsRepositoryInMemory";
+import { CreateCarUseCase } from "../../../../src/modules/cars/useCases/CreateCar/CreateCarUseCase";
+import { AppError } from "../../../../src/shared/errors/AppError";
+import { CarsRepositoryInMemory } from "../../in-memory/CarsRepositoryInMemory";
 
 let createCarUseCase: CreateCarUseCase;
 let carsRepositoryInMemory: CarsRepositoryInMemory;

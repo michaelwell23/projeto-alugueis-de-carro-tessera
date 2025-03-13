@@ -8,6 +8,7 @@ import { ensureAdmin } from "@shared/infra/http/middleware/ensureAdmin";
 import { ensureAuthenticated } from "@shared/infra/http/middleware/ensureAuthenticated";
 
 const categoriesRoutes = Router();
+
 const upload = multer({
   dest: "./temp",
 });

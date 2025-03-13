@@ -1,5 +1,5 @@
-import { ListAvailableCarsUseCase } from "../../../src/modules/cars/useCases/ListAvailableCars/ListAvailableCarsUseCase";
-import { CarsRepositoryInMemory } from "../in-memory/CarsRepositoryInMemory";
+import { ListAvailableCarsUseCase } from "../../../../src/modules/cars/useCases/ListAvailableCars/ListAvailableCarsUseCase";
+import { CarsRepositoryInMemory } from "../../in-memory/CarsRepositoryInMemory";
 
 describe("List Cars", () => {
   let listAvailableCarsUseCase: ListAvailableCarsUseCase;
