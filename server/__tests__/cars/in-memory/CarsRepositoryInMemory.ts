@@ -62,6 +62,7 @@ export class CarsRepositoryInMemory implements ICarsRepository {
   }
 
   async updateAvailable(id: string, available: boolean): Promise<void> {
-    throw new Error("Method not implemented.");
+    const carIndex = this.cars.findIndex((car) => car.id === id);
+    this.cars[carIndex].available = available;
   }
 }
