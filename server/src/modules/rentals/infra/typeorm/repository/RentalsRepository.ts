@@ -45,6 +45,15 @@ class RentalsRepository implements IRentalsRepository {
 
     return rental;
   }
+
+  findById(id: string): Promise<Rental> {
+    const rental = this.repository.findOne(id);
+    return rental;
+  }
+
+  findByUser(user_id: string): Promise<Rental[]> {
+    throw new Error("Method not implemented.");
+  }
 }
 
 export { RentalsRepository };

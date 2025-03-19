@@ -1,29 +1,107 @@
-INSERT INTO cars (
-    id, name, description, daily_rate, color, available, license_plate,
-    fine_amount, brand, category_id, created_at
-) VALUES
-    -- Econômico
-    (gen_random_uuid(), 'Fiat Mobi', 'Carro econômico e compacto', 80, 'Branco', true, 'ABC1A23', 50, 'Fiat', 'bc31b276-dc7a-4a78-bb76-93925edc5048', NOW()),
-    (gen_random_uuid(), 'Chevrolet Onix', 'Modelo econômico e eficiente', 85, 'Prata', true, 'ABC1B23', 55, 'Chevrolet', 'bc31b276-dc7a-4a78-bb76-93925edc5048', NOW()),
-    (gen_random_uuid(), 'Hyundai HB20', 'Carro acessível e econômico', 90, 'Vermelho', true, 'ABC1C23', 60, 'Hyundai', 'bc31b276-dc7a-4a78-bb76-93925edc5048', NOW()),
+-- Econômico
+INSERT INTO cars (id, name, description, daily_rate, color, available, license_plate, fine_amount, brand, category_id, created_at)
+VALUES
+    (gen_random_uuid(), 'Fiat Uno', 'Veículo econômico e compacto.', 50.00, 'Branco', true, 'ABC1234', 100.00, 'Fiat', 'fe0cf763-ecb3-42e3-8c4e-088d0932cc94', NOW()),
+    (gen_random_uuid(), 'Volkswagen Gol', 'Carro básico e eficiente.', 55.00, 'Prata', true, 'DEF5678', 120.00, 'Volkswagen', 'fe0cf763-ecb3-42e3-8c4e-088d0932cc94', NOW()),
+    (gen_random_uuid(), 'Chevrolet Onix', 'Compacto e moderno.', 60.00, 'Preto', true, 'GHI9101', 150.00, 'Chevrolet', 'fe0cf763-ecb3-42e3-8c4e-088d0932cc94', NOW()),
+    (gen_random_uuid(), 'Renault Kwid', 'Econômico e acessível.', 45.00, 'Azul', true, 'JKL1122', 110.00, 'Renault', 'fe0cf763-ecb3-42e3-8c4e-088d0932cc94', NOW()),
+    (gen_random_uuid(), 'Hyundai HB20', 'Pequeno e versátil.', 58.00, 'Vermelho', true, 'MNO3344', 130.00, 'Hyundai', 'fe0cf763-ecb3-42e3-8c4e-088d0932cc94', NOW());
 
-    -- Compacto
-    (gen_random_uuid(), 'Volkswagen Polo', 'Compacto com bom espaço interno', 100, 'Azul', true, 'ABC2A23', 70, 'Volkswagen', '0c3d3f5c-d7d2-490b-9aa4-166a137d8316', NOW()),
-    (gen_random_uuid(), 'Ford Ka', 'Modelo compacto ideal para cidade', 95, 'Cinza', true, 'ABC2B23', 65, 'Ford', '0c3d3f5c-d7d2-490b-9aa4-166a137d8316', NOW()),
-    (gen_random_uuid(), 'Renault Sandero', 'Compacto com ótimo porta-malas', 105, 'Preto', true, 'ABC2C23', 75, 'Renault', '0c3d3f5c-d7d2-490b-9aa4-166a137d8316', NOW()),
+-- Conversível
+INSERT INTO cars (id, name, description, daily_rate, color, available, license_plate, fine_amount, brand, category_id, created_at)
+VALUES
+    (gen_random_uuid(), 'Ford Mustang Convertible', 'Esportivo com teto retrátil.', 150.00, 'Amarelo', true, 'PQR5566', 300.00, 'Ford', 'd171791f-da22-4bbc-bb43-3b5812168337', NOW()),
+    (gen_random_uuid(), 'BMW Z4', 'Conversível de luxo.', 200.00, 'Branco', true, 'STU7788', 400.00, 'BMW', 'd171791f-da22-4bbc-bb43-3b5812168337', NOW()),
+    (gen_random_uuid(), 'Mercedes-Benz SLK', 'Design elegante e esportivo.', 220.00, 'Preto', true, 'VWX9900', 450.00, 'Mercedes-Benz', 'd171791f-da22-4bbc-bb43-3b5812168337', NOW()),
+    (gen_random_uuid(), 'Chevrolet Camaro Convertible', 'Potente e charmoso.', 180.00, 'Azul', true, 'YZA1122', 350.00, 'Chevrolet', 'd171791f-da22-4bbc-bb43-3b5812168337', NOW()),
+    (gen_random_uuid(), 'Porsche Boxster', 'Conversível de alta performance.', 250.00, 'Vermelho', true, 'BCD3344', 500.00, 'Porsche', 'd171791f-da22-4bbc-bb43-3b5812168337', NOW());
 
-    -- Intermediário
-    (gen_random_uuid(), 'Toyota Corolla', 'Carro confortável e espaçoso', 130, 'Branco', true, 'ABC3A23', 90, 'Toyota', '8d70a258-cd40-4019-a41e-6b5b62a87418', NOW()),
-    (gen_random_uuid(), 'Honda Civic', 'Modelo intermediário confortável', 135, 'Preto', true, 'ABC3B23', 95, 'Honda', '8d70a258-cd40-4019-a41e-6b5b62a87418', NOW()),
-    (gen_random_uuid(), 'Nissan Sentra', 'Intermediário com tecnologia avançada', 140, 'Cinza', true, 'ABC3C23', 100, 'Nissan', '8d70a258-cd40-4019-a41e-6b5b62a87418', NOW()),
+-- Híbrido/Elétrico
+INSERT INTO cars (id, name, description, daily_rate, color, available, license_plate, fine_amount, brand, category_id, created_at)
+VALUES
+    (gen_random_uuid(), 'Toyota Prius', 'Híbrido eficiente e confiável.', 80.00, 'Prata', true, 'EFG5678', 200.00, 'Toyota', '208dc3e6-6306-4ff7-a4e4-3d666ed85d50', NOW()),
+    (gen_random_uuid(), 'Tesla Model 3', 'Sedan elétrico de alta tecnologia.', 120.00, 'Branco', true, 'HIJ9101', 300.00, 'Tesla', '208dc3e6-6306-4ff7-a4e4-3d666ed85d50', NOW()),
+    (gen_random_uuid(), 'Nissan Leaf', 'Compacto elétrico com bom alcance.', 75.00, 'Azul', true, 'KLM1122', 250.00, 'Nissan', '208dc3e6-6306-4ff7-a4e4-3d666ed85d50', NOW()),
+    (gen_random_uuid(), 'Chevrolet Volt', 'Híbrido plug-in com design moderno.', 90.00, 'Preto', true, 'NOP3344', 220.00, 'Chevrolet', '208dc3e6-6306-4ff7-a4e4-3d666ed85d50', NOW()),
+    (gen_random_uuid(), 'BMW i3', 'Compacto elétrico urbano.', 100.00, 'Branco', true, 'QRS5566', 280.00, 'BMW', '208dc3e6-6306-4ff7-a4e4-3d666ed85d50', NOW());
 
-    -- Standard
-    (gen_random_uuid(), 'Chevrolet Cruze', 'Modelo standard com ótimo espaço', 150, 'Prata', true, 'ABC4A23', 110, 'Chevrolet', '8ef67c9c-5a11-4707-9af2-1e213def6775', NOW()),
-    (gen_random_uuid(), 'Volkswagen Jetta', 'Standard com potência e conforto', 155, 'Vermelho', true, 'ABC4B23', 115, 'Volkswagen', '8ef67c9c-5a11-4707-9af2-1e213def6775', NOW()),
-    (gen_random_uuid(), 'Hyundai Elantra', 'Modelo versátil e espaçoso', 160, 'Azul', true, 'ABC4C23', 120, 'Hyundai', '8ef67c9c-5a11-4707-9af2-1e213def6775', NOW()),
+-- Off-road
+INSERT INTO cars (id, name, description, daily_rate, color, available, license_plate, fine_amount, brand, category_id, created_at)
+VALUES
+    (gen_random_uuid(), 'Jeep Wrangler', 'Veículo robusto para terrenos acidentados.', 120.00, 'Verde Militar', true, 'TUV7788', 350.00, 'Jeep', '2975f322-e3e6-4d1a-b735-f0bb81d473bb', NOW()),
+    (gen_random_uuid(), 'Land Rover Defender', 'Todo-terreno com design clássico.', 150.00, 'Cinza', true, 'WXY9900', 400.00, 'Land Rover', '2975f322-e3e6-4d1a-b735-f0bb81d473bb', NOW()),
+    (gen_random_uuid(), 'Toyota Hilux', 'Picape off-road com tração 4x4.', 130.00, 'Branco', true, 'ZAB1122', 380.00, 'Toyota', '2975f322-e3e6-4d1a-b735-f0bb81d473bb', NOW()),
+    (gen_random_uuid(), 'Mitsubishi Pajero', 'SUV preparado para aventuras.', 140.00, 'Preto', true, 'CDE3344', 420.00, 'Mitsubishi', '2975f322-e3e6-4d1a-b735-f0bb81d473bb', NOW()),
+    (gen_random_uuid(), 'Ford Bronco', 'Clássico renovado para off-road.', 160.00, 'Azul', true, 'FGH5566', 450.00, 'Ford', '2975f322-e3e6-4d1a-b735-f0bb81d473bb', NOW());
 
-    -- SUV
-    (gen_random_uuid(), 'Jeep Compass', 'SUV para todos os terrenos', 200, 'Branco', true, 'ABC5A23', 150, 'Jeep', '33e89b17-bdc5-4969-b7dd-bbdb857ed992', NOW()),
-    (gen_random_uuid(), 'Toyota RAV4', 'SUV com tecnologia híbrida', 210, 'Preto', true, 'ABC5B23', 160, 'Toyota', '33e89b17-bdc5-4969-b7dd-bbdb857ed992', NOW()),
-    (gen_random_uuid(), 'Chevrolet Tracker', 'SUV compacto e econômico', 190, 'Cinza', true, 'ABC5C23', 140, 'Chevrolet', '33e89b17-bdc5-4969-b7dd-bbdb857ed992', NOW());
+-- Esportivo
+INSERT INTO cars (id, name, description, daily_rate, color, available, license_plate, fine_amount, brand, category_id, created_at)
+VALUES
+    (gen_random_uuid(), 'Ferrari F8 Tributo', 'Supercarro com desempenho excepcional.', 500.00, 'Vermelho', true, 'IJK7788', 1000.00, 'Ferrari', 'a8690661-7e86-461c-ae55-505202cd5702', NOW()),
+    (gen_random_uuid(), 'Lamborghini Huracán', 'Design agressivo e motor potente.', 600.00, 'Amarelo', true, 'LMN9900', 1200.00, 'Lamborghini', 'a8690661-7e86-461c-ae55-505202cd5702', NOW()),
+    (gen_random_uuid(), 'Porsche 911', 'Ícone dos carros esportivos.', 450.00, 'Preto', true, 'OPQ1122', 900.00, 'Porsche', 'a8690661-7e86-461c-ae55-505202cd5702', NOW()),
+    (gen_random_uuid(), 'Chevrolet Corvette', 'Esportivo americano de alta performance.', 400.00, 'Azul', true, 'RST3344', 850.00, 'Chevrolet', 'a8690661-7e86-461c-ae55-505202cd5702', NOW()),
+    (gen_random_uuid(), 'Audi R8', 'Supercarro com tecnologia avançada.', 550.00, 'Branco', true, 'UVW5566', 1100.00, 'Audi', 'a8690661-7e86-461c-ae55-505202cd5702', NOW());
 
+-- Motos
+INSERT INTO cars (id, name, description, daily_rate, color, available, license_plate, fine_amount, brand, category_id, created_at)
+VALUES
+    (gen_random_uuid(), 'Honda CB 500X', 'Moto urbana com estilo aventureiro.', 40.00, 'Vermelho', true, 'XYZ7788', 150.00, 'Honda', 'f9dea973-7f0f-4c15-84f3-56fae5c13fee', NOW()),
+    (gen_random_uuid(), 'Yamaha MT-07', 'Naked bike ágil e versátil.', 45.00, 'Azul', true, 'ABC9900', 160.00, 'Yamaha', 'f9dea973-7f0f-4c15-84f3-56fae5c13fee', NOW()),
+    (gen_random_uuid(), 'BMW G 310 GS', 'Trail compacta para uso urbano e estradas.', 50.00, 'Branco', true, 'DEF1122', 180.00, 'BMW', 'f9dea973-7f0f-4c15-84f3-56fae5c13fee', NOW()),
+    (gen_random_uuid(), 'Kawasaki Ninja 400', 'Esportiva de entrada com design moderno.', 55.00, 'Verde', true, 'GHI3344', 200.00, 'Kawasaki', 'f9dea973-7f0f-4c15-84f3-56fae5c13fee', NOW()),
+    (gen_random_uuid(), 'Harley-Davidson Street 750', 'Cruiser clássico com motor V-Twin.', 60.00, 'Preto', true, 'JKL5566', 250.00, 'Harley-Davidson', 'f9dea973-7f0f-4c15-84f3-56fae5c13fee', NOW());
+
+-- Utilitários
+INSERT INTO cars (id, name, description, daily_rate, color, available, license_plate, fine_amount, brand, category_id, created_at)
+VALUES
+    (gen_random_uuid(), 'Fiat Doblo', 'Utilitário compacto e funcional.', 70.00, 'Branco', true, 'MNO7788', 220.00, 'Fiat', '68f64183-d94f-4a5f-bda0-55a793481b22', NOW()),
+    (gen_random_uuid(), 'Renault Kangoo', 'Van compacta para transporte de cargas.', 75.00, 'Prata', true, 'PQR9900', 230.00, 'Renault', '68f64183-d94f-4a5f-bda0-55a793481b22', NOW()),
+    (gen_random_uuid(), 'Peugeot Partner', 'Utilitário espaçoso e econômico.', 80.00, 'Azul', true, 'STU1122', 250.00, 'Peugeot', '68f64183-d94f-4a5f-bda0-55a793481b22', NOW()),
+    (gen_random_uuid(), 'Citroën Berlingo', 'Compacto e versátil para uso comercial.', 85.00, 'Branco', true, 'VWX3344', 260.00, 'Citroën', '68f64183-d94f-4a5f-bda0-55a793481b22', NOW()),
+    (gen_random_uuid(), 'Volkswagen Saveiro', 'Picape leve para transporte de pequenas cargas.', 90.00, 'Preto', true, 'YZA5566', 280.00, 'Volkswagen', '68f64183-d94f-4a5f-bda0-55a793481b22', NOW());
+
+-- Compacto
+INSERT INTO cars (id, name, description, daily_rate, color, available, license_plate, fine_amount, brand, category_id, created_at)
+VALUES
+    (gen_random_uuid(), 'Ford Ka', 'Compacto urbano e eficiente.', 60.00, 'Branco', true, 'BCD7788', 180.00, 'Ford', '66f838d6-3296-4dce-8fcf-a189bd8fef72', NOW()),
+    (gen_random_uuid(), 'Volkswagen Up', 'Pequeno e moderno.', 65.00, 'Vermelho', true, 'EFG9900', 190.00, 'Volkswagen', '66f838d6-3296-4dce-8fcf-a189bd8fef72', NOW()),
+    (gen_random_uuid(), 'Hyundai HB20S', 'Sedan compacto com bom espaço.', 70.00, 'Prata', true, 'HIJ1122', 200.00, 'Hyundai', '66f838d6-3296-4dce-8fcf-a189bd8fef72', NOW()),
+    (gen_random_uuid(), 'Chevrolet Onix Plus', 'Compacto com design atualizado.', 75.00, 'Preto', true, 'KLM3344', 220.00, 'Chevrolet', '66f838d6-3296-4dce-8fcf-a189bd8fef72', NOW()),
+    (gen_random_uuid(), 'Renault Sandero', 'Compacto versátil e acessível.', 68.00, 'Azul', true, 'NOP5566', 210.00, 'Renault', '66f838d6-3296-4dce-8fcf-a189bd8fef72', NOW());
+
+-- Caminhões leves
+INSERT INTO cars (id, name, description, daily_rate, color, available, license_plate, fine_amount, brand, category_id, created_at)
+VALUES
+    (gen_random_uuid(), 'Mercedes-Benz Sprinter', 'Caminhão leve para transporte de cargas.', 150.00, 'Branco', true, 'QRS7788', 400.00, 'Mercedes-Benz', '21835868-56b2-4d67-9b67-7a97d3a3e66e', NOW()),
+    (gen_random_uuid(), 'Volkswagen Delivery', 'Caminhão leve para uso comercial.', 140.00, 'Prata', true, 'TUV9900', 380.00, 'Volkswagen', '21835868-56b2-4d67-9b67-7a97d3a3e66e', NOW()),
+    (gen_random_uuid(), 'Ford Transit', 'Van comercial com grande capacidade.', 160.00, 'Azul', true, 'WXY1122', 420.00, 'Ford', '21835868-56b2-4d67-9b67-7a97d3a3e66e', NOW()),
+    (gen_random_uuid(), 'Scania P-Series', 'Caminhão leve com motor eficiente.', 170.00, 'Branco', true, 'ZAB3344', 450.00, 'Scania', '21835868-56b2-4d67-9b67-7a97d3a3e66e', NOW()),
+    (gen_random_uuid(), 'Volvo FL', 'Caminhão leve para entregas urbanas.', 180.00, 'Preto', true, 'CDE5566', 480.00, 'Volvo', '21835868-56b2-4d67-9b67-7a97d3a3e66e', NOW());
+
+-- SUV
+INSERT INTO cars (id, name, description, daily_rate, color, available, license_plate, fine_amount, brand, category_id, created_at)
+VALUES
+    (gen_random_uuid(), 'Jeep Renegade', 'SUV compacto e versátil.', 90.00, 'Branco', true, 'FGH7788', 250.00, 'Jeep', 'c170776a-9975-42af-87e8-c7c02b6574af', NOW()),
+    (gen_random_uuid(), 'Hyundai Tucson', 'SUV médio com design moderno.', 100.00, 'Prata', true, 'IJK9900', 280.00, 'Hyundai', 'c170776a-9975-42af-87e8-c7c02b6574af', NOW()),
+    (gen_random_uuid(), 'Toyota RAV4', 'SUV eficiente e confiável.', 110.00, 'Azul', true, 'LMN1122', 300.00, 'Toyota', 'c170776a-9975-42af-87e8-c7c02b6574af', NOW()),
+    (gen_random_uuid(), 'Honda CR-V', 'SUV espaçoso com bom desempenho.', 120.00, 'Preto', true, 'OPQ3344', 320.00, 'Honda', 'c170776a-9975-42af-87e8-c7c02b6574af', NOW()),
+    (gen_random_uuid(), 'Subaru Forester', 'SUV com tração AWD para qualquer terreno.', 130.00, 'Vermelho', true, 'RST5566', 350.00, 'Subaru', 'c170776a-9975-42af-87e8-c7c02b6574af', NOW());
+
+-- Minivans
+INSERT INTO cars (id, name, description, daily_rate, color, available, license_plate, fine_amount, brand, category_id, created_at)
+VALUES
+    (gen_random_uuid(), 'Toyota Sienna', 'Minivan espaçosa para famílias.', 140.00, 'Branco', true, 'UVW7788', 380.00, 'Toyota', '4a563371-3c5c-4c84-8b6b-6cfa3e0d42e8', NOW()),
+    (gen_random_uuid(), 'Honda Odyssey', 'Minivan luxuosa com tecnologia avançada.', 150.00, 'Prata', true, 'XYZ9900', 400.00, 'Honda', '4a563371-3c5c-4c84-8b6b-6cfa3e0d42e8', NOW()),
+    (gen_random_uuid(), 'Chrysler Pacifica', 'Minivan com interior sofisticado.', 160.00, 'Azul', true, 'ABC1122', 420.00, 'Chrysler', '4a563371-3c5c-4c84-8b6b-6cfa3e0d42e8', NOW()),
+    (gen_random_uuid(), 'Kia Carnival', 'Minivan moderna com muito espaço.', 170.00, 'Preto', true, 'DEF3344', 450.00, 'Kia', '4a563371-3c5c-4c84-8b6b-6cfa3e0d42e8', NOW()),
+    (gen_random_uuid(), 'Mercedes-Benz V-Class', 'Minivan premium com conforto elevado.', 200.00, 'Branco', true, 'GHI5566', 500.00, 'Mercedes-Benz', '4a563371-3c5c-4c84-8b6b-6cfa3e0d42e8', NOW());
+
+-- Motorhomes
+INSERT INTO cars (id, name, description, daily_rate, color, available, license_plate, fine_amount, brand, category_id, created_at)
+VALUES
+    (gen_random_uuid(), 'Winnebago View', 'Motorhome compacto com cozinha e banheiro.', 150.00, 'Branco', true, 'MOT1234', 300.00, 'Winnebago', '4fe816a1-e32e-4827-b943-5992c8902335', NOW()),
+    (gen_random_uuid(), 'Thor Motor Coach Four Winds', 'Motorhome médio com espaço para até 4 pessoas.', 180.00, 'Prata', true, 'MOT5678', 350.00, 'Thor', '4fe816a1-e32e-4827-b943-5992c8902335', NOW()),
+    (gen_random_uuid(), 'Forest River Sunseeker', 'Motorhome espaçoso com sala de estar e quarto separado.', 200.00, 'Azul', true, 'MOT9101', 400.00, 'Forest River', '4fe816a1-e32e-4827-b943-5992c8902335', NOW()),
+    (gen_random_uuid(), 'Jayco Seneca', 'Motorhome premium com design moderno e luxuoso.', 250.00, 'Preto', true, 'MOT1122', 500.00, 'Jayco', '4fe816a1-e32e-4827-b943-5992c8902335', NOW()),
+    (gen_random_uuid(), 'Airstream Interstate', 'Motorhome compacto com estilo clássico e eficiente.', 220.00, 'Cinza', true, 'MOT3344', 450.00, 'Airstream', '4fe816a1-e32e-4827-b943-5992c8902335', NOW());
