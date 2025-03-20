@@ -27,7 +27,7 @@ export class DevolutionRentalUseCase {
     const minimumDaily = 1;
 
     const rental = await this.rentalsRepository.findById(id);
-    const car = await this.carsRepository.findById(id);
+    const car = await this.carsRepository.findById(rental.car_id);
 
     if (!rental) {
       throw new Error("Rental does not exists!");
