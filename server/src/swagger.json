@@ -251,6 +251,9 @@
         "daily_rate": {
           "type": "number"
         },
+        "color": {
+          "type": "string"
+        },
         "license_plate": {
           "type": "string"
         },
