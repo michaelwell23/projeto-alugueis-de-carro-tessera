@@ -8,12 +8,12 @@ export interface IUsersTokensRepository {
     user_id,
   }: ICreateUserTokenDTO): Promise<UserTokens>;
 
-  // findByUserIdAndRefreshToken(
-  //   user_id: string,
-  //   refresh_token: string
-  // ): Promise<UserTokens>;
+  findByUserIdAndRefreshToken(
+    user_id: string,
+    refresh_token: string
+  ): Promise<UserTokens>;
 
-  // deleteById(id: string): Promise<void>;
+  deleteById(id: string): Promise<void>;
 
   // findByRefreshToken(refresh_token: string): Promise<UserTokens>;
 }
