@@ -1,4 +1,3 @@
-import "reflect-metadata";
 import { compare } from "bcrypt";
 import { sign } from "jsonwebtoken";
 import { inject, injectable } from "tsyringe";
@@ -28,10 +27,8 @@ export class AuthenticateUserUseCase {
   constructor(
     @inject("UsersRepository")
     private usersRepository: IUsersRepository,
-
     @inject("UsersTokensRepository")
     private usersTokensRepository: IUsersTokensRepository,
-
     @inject("DayjsDateProvider")
     private dateProvider: IDateProvider
   ) {}
@@ -47,13 +44,13 @@ export class AuthenticateUserUseCase {
     } = auth;
 
     if (!user) {
-      throw new AppError("Email or Password Incorrect!");
+      throw new AppError("Email or password incorrect!");
     }
 
     const passwordMatch = await compare(password, user.password);
 
     if (!passwordMatch) {
-      throw new AppError("Email or Password Incorrect!");
+      throw new AppError("Email or password incorrect!");
     }
 
     const token = sign({}, secret_token, {
