@@ -9,13 +9,11 @@ export class MailProviderInMemory implements IMailProvider {
     variables: any,
     path: string
   ): Promise<void> {
-    this.messages.push({
+    await this.messages.push({
       to,
       subject,
       variables,
       path,
     });
-
-    return Promise.resolve();
   }
 }
