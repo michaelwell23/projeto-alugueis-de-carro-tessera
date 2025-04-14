@@ -1,7 +1,7 @@
 import { IMailProvider } from "@shared/container/providers/MailProvider/IMailProvider";
 
 export class MailProviderInMemory implements IMailProvider {
-  private messages: any[] = [];
+  private message: any[] = [];
 
   async sendMail(
     to: string,
@@ -9,7 +9,7 @@ export class MailProviderInMemory implements IMailProvider {
     variables: any,
     path: string
   ): Promise<void> {
-    await this.messages.push({
+    this.message.push({
       to,
       subject,
       variables,

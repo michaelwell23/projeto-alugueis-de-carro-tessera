@@ -8,7 +8,7 @@ import { AppError } from "../../../src/shared/errors/AppError";
 import { CarsRepositoryInMemory } from "../../cars/in-memory/CarsRepositoryInMemory";
 import { RentalsRepositoryInMemory } from "../in-memory/RentalsRepositoryInMemory";
 
-let createRentalUseCase: CreateRentalsUseCase;
+let createRentalsUseCase: CreateRentalsUseCase;
 let rentalsRepositoryInMemory: RentalsRepositoryInMemory;
 let carsRepositoryInMemory: CarsRepositoryInMemory;
 let dayjsDateProvider: DayjsDateProvider;
@@ -20,7 +20,7 @@ describe("Create Rental", () => {
     rentalsRepositoryInMemory = new RentalsRepositoryInMemory();
     carsRepositoryInMemory = new CarsRepositoryInMemory();
     dayjsDateProvider = new DayjsDateProvider();
-    createRentalUseCase = new CreateRentalsUseCase(
+    createRentalsUseCase = new CreateRentalsUseCase(
       rentalsRepositoryInMemory,
       dayjsDateProvider,
       carsRepositoryInMemory
@@ -32,14 +32,14 @@ describe("Create Rental", () => {
       name: "Test",
       description: "Car Test",
       daily_rate: 100,
-      color: "white",
+      color: "blue",
       license_plate: "test",
       fine_amount: 40,
       category_id: "1234",
       brand: "brand",
     });
 
-    const rental = await createRentalUseCase.execute({
+    const rental = await createRentalsUseCase.execute({
       user_id: "12345",
       car_id: car.id,
       expected_return_date: dayAdd24Hours,
@@ -57,7 +57,7 @@ describe("Create Rental", () => {
     });
 
     await expect(
-      createRentalUseCase.execute({
+      createRentalsUseCase.execute({
         user_id: "12345",
         car_id: "121212",
         expected_return_date: dayAdd24Hours,
@@ -73,7 +73,7 @@ describe("Create Rental", () => {
     });
 
     await expect(
-      createRentalUseCase.execute({
+      createRentalsUseCase.execute({
         user_id: "321",
         car_id: "test",
         expected_return_date: dayAdd24Hours,
@@ -83,7 +83,7 @@ describe("Create Rental", () => {
 
   it(" should not be able to create a new rental with invalid return time ", async () => {
     await expect(
-      createRentalUseCase.execute({
+      createRentalsUseCase.execute({
         user_id: "123",
         car_id: "test",
         expected_return_date: dayjs().toDate(),
