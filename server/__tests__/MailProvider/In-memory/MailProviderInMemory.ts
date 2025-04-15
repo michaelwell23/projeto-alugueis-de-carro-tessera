@@ -1,4 +1,4 @@
-import { IMailProvider } from "@shared/container/providers/MailProvider/IMailProvider";
+import { IMailProvider } from "../../../src/shared/container/providers/MailProvider/IMailProvider";
 
 export class MailProviderInMemory implements IMailProvider {
   private message: any[] = [];

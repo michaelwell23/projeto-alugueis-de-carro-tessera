@@ -1,6 +1,5 @@
-import { CreateCarSpecificationUseCase } from "@modules/cars/useCases/CreateCarSpecifications/CreateCarSpecificationUseCase";
-import { AppError } from "@shared/errors/AppError";
-
+import { CreateCarSpecificationUseCase } from "../../../../src/modules/cars/useCases/CreateCarSpecifications/CreateCarSpecificationUseCase";
+import { AppError } from "../../../../src/shared/errors/AppError";
 import { CarsRepositoryInMemory } from "../../in-memory/CarsRepositoryInMemory";
 import { SpecificationsRepositoryInMemory } from "../../in-memory/SpecificationsRepositoryInMemory";
 

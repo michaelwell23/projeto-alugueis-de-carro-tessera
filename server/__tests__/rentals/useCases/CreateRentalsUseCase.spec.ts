@@ -32,7 +32,7 @@ describe("Create Rental", () => {
       name: "Test",
       description: "Car Test",
       daily_rate: 100,
-      color: "blue",
+      color: "black",
       license_plate: "test",
       fine_amount: 40,
       category_id: "1234",

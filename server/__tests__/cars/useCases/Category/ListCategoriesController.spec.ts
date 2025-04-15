@@ -3,8 +3,8 @@ import request from "supertest";
 import { Connection } from "typeorm";
 import { v4 as uuidV4 } from "uuid";
 
-import app from "@shared/infra/http/app";
-import createConnection from "@shared/infra/typeorm";
+import app from "../../../../src/shared/infra/http/app";
+import createConnection from "../../../../src/shared/infra/typeorm";
 
 let connection: Connection;
 describe("Create Category Controller", () => {

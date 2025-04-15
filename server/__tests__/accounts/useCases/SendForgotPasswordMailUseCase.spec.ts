@@ -1,7 +1,6 @@
-import { AppError } from "@shared/errors/AppError";
-
 import { SendForgotPasswordMailUseCase } from "../../../src/modules/accounts/useCases/SendForgotPasswordMail/SendForgotPasswordMailUseCase";
 import { DayjsDateProvider } from "../../../src/shared/container/providers/DateProvider/implementations/DayjsDateProvider";
+import { AppError } from "../../../src/shared/errors/AppError";
 import { MailProviderInMemory } from "../../MailProvider/In-memory/MailProviderInMemory";
 import { UsersRepositoryInMemory } from "../in-memory/UsersRepositoryInMemory";
 import { UsersTokensRepositoryInMemory } from "../in-memory/UsersTokensRepositoryInMemory";
@@ -51,7 +50,7 @@ describe("Send Forgot Mail", () => {
   it("should be able to create an users token", async () => {
     const generateTokenMail = spyOn(usersTokensRepositoryInMemory, "create");
 
-    usersRepositoryInMemory.create({
+    await usersRepositoryInMemory.create({
       driver_license: "787330",
       email: "abome@regrog.ee",
       name: "Leon Perkins",
