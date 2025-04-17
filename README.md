@@ -1,35 +1,34 @@
-<h1 align="center">
-  <img alt="Tessera" title="Tessera" src="https://raw.githubusercontent.com/seu-usuario/Tessera/main/logo.png" width="300px" />
-</h1>
+<p align="center"> <img alt="Tessera" title="Tessera" src="./server/logo-tessera.png" width="400px" /> </p> <p align="center"> <img alt="Contagem de linguagens do GitHub" src="https://img.shields.io/github/languages/count/seu-usuario/tessera?color=%2304D361"> <img alt="Licença" src="https://img.shields.io/badge/licença-MIT-%2304D361"> <a href="https://github.com/seu-usuario/tessera/stargazers"></a> </p>
 
-### Tecnologias utilizadas
+## Principais tecnologias e bibliotecas utilizadas:
 
-<p align="center">
-  <a href="/backend/">
-      <img src="https://raw.githubusercontent.com/michaelwell23/projeto-servico-de-entregas/master/server/.github/nodejs.svg" alt="Node.Js" />
-  </a>&nbsp;&nbsp;&nbsp;&nbsp;
-  <a href="/frontend/">
-    <img src="https://raw.githubusercontent.com/michaelwell23/projeto-servico-de-entregas/master/server/.github/reactjs.svg" alt="ReactJS">
-  </a>&nbsp;&nbsp;&nbsp;&nbsp;
-</p>
+- Node.js + TypeScript
+- Express e Express Async Errors
+- TypeORM + PostgreSQL
+- Redis + Rate Limiter
+- JWT para autenticação
+- Multer para upload de arquivos
+- Nodemailer para envio de emails
+- Sentry para monitoramento e rastreamento de erros
+- Swagger para documentação da API
+- Bcrypt para hashing de senhas
+- AWS SDK para integração com serviços AWS
+- Dayjs para manipulação de datas
+- CSV Parse, Handlebars, UUID, entre outros
+- Jest e Supertest para testes automatizados
 
-### SOBRE O PROJETO
+## Sobre o Projeto
 
-O **Tessera** é um sistema de aluguel de carros desenvolvido para facilitar o processo de locação de veículos. Com ele, os usuários cadastrados podem explorar uma ampla variedade de carros disponíveis para aluguel, filtrando por marca, modelo e categoria. A plataforma oferece uma interface intuitiva que permite aos usuários encontrar rapidamente o veículo ideal para suas necessidades.
+Tessera é uma plataforma de aluguel de veículos de todos os tipos, pensada para oferecer flexibilidade, segurança e praticidade tanto para locadores quanto para clientes. Com o Tessera, é possível:
 
-O projeto está dividido em duas partes principais:
+- Cadastrar e listar veículos de diversos tipos (carros, motos, caminhões, utilitários e muito mais)
+- Realizar reservas de forma rápida e segura
+- Gerenciar seus veículos e acompanhar o histórico de aluguéis
+- Receber notificações e atualizações em tempo real
+- Acompanhar o status da locação, desde a solicitação até a devolução
+- Integrações futuras com serviços de pagamento e validação de documentos
+- A plataforma é ideal para pessoas físicas e empresas que desejam oferecer ou alugar veículos com eficiência e controle total.
 
-- **Backend**: Desenvolvido com Node.js, responsável pela lógica do sistema, autenticação de usuários e gerenciamento dos dados relacionados aos veículos e reservas.
+## Licença
 
-Além disso, o Tessera inclui funcionalidades como:
-
-- Cadastro e autenticação de usuários;
-- Visualização detalhada dos veículos disponíveis;
-- Filtros avançados por marca, modelo e categoria;
-- Sistema de reserva de veículos.
-
----
-
-### CONTRIBUA
-
-- Para contribuir faça um fork no projeto e siga as instruções abaixo:
+Este projeto está sob a licença MIT. Para mais detalhes, leia o arquivo LICENSE.
